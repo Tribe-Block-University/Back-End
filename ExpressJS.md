@@ -31,26 +31,26 @@ For more information on ExpressJS, you can refer to the [official documentation]
 Before you begin, ensure you have **Node.js** and **npm** (Node Package Manager) installed. You can download Node.js from [here](https://nodejs.org/).
 
 To check if Node.js and npm are installed, run the following commands in your terminal:
-```
+```sh
 node -v
 npm -v
 ```
 
 ## Initialize a New Project
 Create a new directory for your project and initialize it using npm:
-```red
+```js
 mkdir my-express-app
 cd my-express-app
 npm init -y
 ```
 ## Install Express
 Now, install ExpressJS as a dependency:
-```
+```sh
 npm install express
 ```
 ## Create Your First Express App
 Create a file named app.js in your project directory:
-```
+```js
 // app.js
 const express = require('express');
 const app = express();
@@ -67,7 +67,7 @@ app.listen(port, () => {
 
 ## Run the App
 ### Start your application:
-```
+```js
 node app.js
 ```
 Visit http://localhost:3000 in your browser to see the result.
@@ -75,7 +75,7 @@ Visit http://localhost:3000 in your browser to see the result.
 # Basic Routing
 Express uses routing to map HTTP requests to specific routes (endpoints) and define how they should be handled. In this section, we'll learn how to create routes and handle HTTP requests.
 ## Example: Handling GET and POST Requests
-```
+```js
 // Handling GET Request
 app.get('/home', (req, res) => {
   res.send('Welcome to the Home Page');
@@ -89,7 +89,7 @@ app.post('/submit', (req, res) => {
 
 ## Route Parameters
 Express allows you to define dynamic routes using route parameters.
-```
+```js
 app.get('/user/:id', (req, res) => {
   const userId = req.params.id;
   res.send(`User ID is: ${userId}`);
@@ -100,7 +100,7 @@ app.get('/user/:id', (req, res) => {
 Middleware functions are used to modify the request and response objects before passing them to the next handler in the stack.
 
 ## Example: Simple Middleware
-```
+```js
 // Middleware function
 app.use((req, res, next) => {
   console.log('A request was made to the server');
@@ -110,14 +110,14 @@ app.use((req, res, next) => {
 
 ## Using Built-in Middleware
 Express includes several built-in middleware functions, such as express.json() to parse incoming JSON requests.
-```
+```js
 app.use(express.json());
 ```
 
 # Handling HTTP Requests
 ## Request Object
 The req object provides information about the HTTP request, such as headers, body, query parameters, and more.
-```
+```js
 app.get('/greet', (req, res) => {
   const name = req.query.name || 'Guest';
   res.send(`Hello, ${name}!`);
@@ -126,7 +126,7 @@ app.get('/greet', (req, res) => {
 
 ## Response Object
 The res object is used to send a response back to the client.
-```
+```js
 app.get('/json', (req, res) => {
   res.json({ message: 'This is a JSON response' });
 });
@@ -136,7 +136,7 @@ app.get('/json', (req, res) => {
 Express can serve static files like images, stylesheets, and JavaScript files using the built-in express.static middleware.
 
 ## Example:
-```
+```js
 app.use(express.static('public'));
 ```
 Now, you can store your static files (like images, CSS files) in the public folder, and they will be accessible by the browser.
@@ -145,7 +145,7 @@ Now, you can store your static files (like images, CSS files) in the public fold
 Error handling in Express can be done using middleware.
 
 ## Example: Basic Error Handling Middleware
-```
+```js
 // Catch-all error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -157,7 +157,7 @@ app.use((err, req, res, next) => {
 Express is commonly used to build APIs that interact with databases. In this section, we'll connect to a MongoDB database using Mongoose.
 
 ## Example: Connecting to MongoDB
-```
+```js
 npm install mongoose
 ```
 ```
