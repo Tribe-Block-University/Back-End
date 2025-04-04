@@ -1,2 +1,2 @@
 # BackEnd
-This guide will take you through the fundamentals of BackEnd Topics
+This guide will take you through the fundamental BackEnd courses
