@@ -26,13 +26,13 @@ print("Hello, Python!")
 Installing Python
 * Download from [Python.org](https://www.python.org/downloads/)
 * Verify installation using:
-```
+```sh
 python --version
 ```
 
 # Variables & Data Types
 Python supports multiple data types:
-```
+```python
 name = "Alice"  # String
 age = 25  # Integer
 pi = 3.14  # Float
@@ -41,7 +41,7 @@ is_active = True  # Boolean
 
 # Control Flow
 ## If-Else Condition
-```
+```python
 if age > 18:
     print("Adult")
 else:
@@ -49,13 +49,13 @@ else:
 ```
 
 ## Loops
-```
+```python
 for i in range(5):
     print(i)
 ```
 
 # Functions & Modules
-```
+```python
 def greet(name):
     return f"Hello, {name}!"
 
@@ -63,7 +63,7 @@ print(greet("Alice"))
 ```
 
 # Object-Oriented Programming
-```
+```python
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -77,13 +77,13 @@ print(p1.greet())
 ```
 
 # File Handling
-```
+```python
 with open("file.txt", "w") as f:
     f.write("Hello, File!")
 ```
 
 # Working with Databases
-```
+```python
 import sqlite3
 conn = sqlite3.connect("database.db")
 cursor = conn.cursor()
@@ -93,7 +93,7 @@ conn.commit()
 
 # Web Development with Flask & Django
 Flask Example:
-```
+```python
 from flask import Flask
 app = Flask(__name__)
 
@@ -106,7 +106,7 @@ if __name__ == "__main__":
 ```
 
 # Error Handling
-```
+```python
 try:
     x = 1 / 0
 except ZeroDivisionError:
